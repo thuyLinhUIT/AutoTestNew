@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>D:\Users\Boss Linh\AppData\Local\Temp\testng-eclipse--112666896\testng-customsuite.xml</span>
+                    <span>D:\Users\Boss Linh\AppData\Local\Temp\testng-eclipse--1687270028\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="automation.testsuite.Day14_Excercise" class="method navigator-link" hash-for-method="ChangePassword">ChangePassword</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="automation.testsuite.Day16_ChangePass_Alada" class="method navigator-link" hash-for-method="ChangePassword">ChangePassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -122,7 +122,7 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">automation.testsuite.Day14_Excercise</span>
+              <span class="class-name">automation.testsuite.Day16_ChangePass_Alada</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -130,15 +130,14 @@
                   <a name="ChangePassword">
                   </a> <!-- ChangePassword -->
                   <span class="method-name">ChangePassword</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=119.0.6045.199)
+                  <div class="stack-trace">org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading &apos;click&apos;)
+  (Session info: chrome=120.0.6099.109)
 Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [aba3ca33eeade4caf482b3f61d15bd98, clickElement {id=26DD9A4C4A59E6D9B084018A9BB992FB_element_249}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.199, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: D:\Users\BOSSLI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58896}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58896/devtoo..., se:cdpVersion: 119.0.6045.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (aba3ca33eeade4caf482b3f61d15bd98)] -&gt; xpath: //div[@class=&apos;info&apos;]//descendant::a[normalize-space()=&apos;Chỉnh sửa thông tin&apos;]]
-Session ID: aba3ca33eeade4caf482b3f61d15bd98
+Command: [fbb9b9c3aa367059ce42dd829a092807, executeScript {script=arguments[0].click();, args=[null]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: D:\Users\BOSSLI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60958}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60958/devtoo..., se:cdpVersion: 120.0.6099.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fbb9b9c3aa367059ce42dd829a092807
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
@@ -149,14 +148,9 @@ Session ID: aba3ca33eeade4caf482b3f61d15bd98
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:242)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
-	at automation.page.LoginPage_Factory_Day14.changePass(LoginPage_Factory_Day14.java:138)
-	at automation.testsuite.Day14_Excercise.ChangePassword(Day14_Excercise.java:44)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:476)
+	at automation.common.CommonBase.clickByJsExecutor(CommonBase.java:76)
+	at automation.testsuite.Day16_ChangePass_Alada.ChangePassword(Day16_ChangePass_Alada.java:38)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -192,7 +186,7 @@ Session ID: aba3ca33eeade4caf482b3f61d15bd98
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Users\Boss Linh\AppData\Local\Temp\testng-eclipse--112666896\testng-customsuite.xml</span>
+            <span class="header-content">D:\Users\Boss Linh\AppData\Local\Temp\testng-eclipse--1687270028\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -201,7 +195,7 @@ Session ID: aba3ca33eeade4caf482b3f61d15bd98
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;automation.testsuite.Day14_Excercise&quot;/&gt;
+      &lt;class name=&quot;automation.testsuite.Day16_ChangePass_Alada&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -244,13 +238,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'ChangePassword')
-data.setCell(0, 2, 'automation.testsuite.Day14_Excercise')
-data.setCell(0, 3, 11283);
+data.setCell(0, 2, 'automation.testsuite.Day16_ChangePass_Alada')
+data.setCell(0, 3, 15419);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -276,7 +270,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">automation.testsuite.Day14_Excercise</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">automation.testsuite.Day16_ChangePass_Alada</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">openChrome</span>
                 <span class="method-start">0 ms</span>
@@ -285,12 +279,8 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">ChangePassword</span>
-                <span class="method-start">18661 ms</span>
+                <span class="method-start">29250 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">closeChromeDriver</span>
-                <span class="method-start">30007 ms</span>
-              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

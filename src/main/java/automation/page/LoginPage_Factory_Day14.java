@@ -1,10 +1,14 @@
 package automation.page;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.internal.AbstractParallelWorker.Arguments;
 
 public class LoginPage_Factory_Day14 {
 	private WebDriver driver;
@@ -61,10 +65,10 @@ public class LoginPage_Factory_Day14 {
 	@FindBy(id = "txtrenewpass")
 	WebElement txtPassReNew;
 	
-	@FindBy(xpath = "//div[@class='info']//descendant::a[normalize-space()='Chỉnh sửa thông tin']")
+	@FindBy(xpath = "//button[normalize-space()='Lưu mật khẩu mới']")
 	WebElement buttonSaveChangePass;
 	
-	@FindBy(xpath = "//div[@class='info']//descendant::a[normalize-space()='Chỉnh sửa thông tin']")
+	@FindBy(xpath = "//div[@class=\"itool\"]/a[normalize-space()='Thoát']")
 	WebElement lickLogOut;
 	
 	public LoginPage_Factory_Day14(WebDriver _driver) {
@@ -122,7 +126,7 @@ public class LoginPage_Factory_Day14 {
 		buttonLogin.click();
 	}
 //LogOut
-	public void changePass(String oldPass,String newPass) {
+	public void changePass(String oldPass,String newPass) throws InterruptedException {
 		iconAvatar.click();
 		linkChangeInfo.click();
 		
@@ -135,18 +139,16 @@ public class LoginPage_Factory_Day14 {
 		txtPassReNew.clear();
 		txtPassReNew.sendKeys(newPass);
 		
-		buttonSaveChangePass.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", buttonSaveChangePass);
+		//buttonSaveChangePass.click();
 		   // Get the alert
-       driver.switchTo().alert().accept();
-//      WebElement alert = (WebElement) driver.switchTo().alert();
-        // Check if the alert is present
-//        if (alert != null) {
-//            System.out.println("Alert is present");
-//            alert.accept(); // Close the alert
-//        } else {
-//            System.out.println("Alert is not present");
-//        }
-//      alert.click();
+		Thread.sleep(1000);
+//	String msgConfirmString=driver.switchTo().alert().getText();
+//	System.out.println(msgConfirmString);
+//		assertEquals(msgConfirmString, "Cập nhật mật khẩu mới thành công!");
+      driver.switchTo().alert().accept();
+
 		iconAvatar.click();
 		lickLogOut.click();
 	}

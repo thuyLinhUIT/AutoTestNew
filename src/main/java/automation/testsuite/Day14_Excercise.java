@@ -37,14 +37,14 @@ public class Day14_Excercise extends CommonBase{
 //	}
 	
 	@Test(priority = 3)
-	public void ChangePassword() {
+	public void ChangePassword() throws InterruptedException {
 		LoginPage_Factory_Day14 login = new LoginPage_Factory_Day14(driver);
 		//login.SignInClick();
+		login.LoginFunction("li@gmail.com", "1234567");
+		login.changePass("1234567","123456");
+
 		login.LoginFunction("li@gmail.com", "123456");
 		login.changePass("123456","1234567");
-//		driver.close();
-//		driver = initChromeDriver(CT_Acc_Excersise_Day14.RISE_URL);
-		login.LoginFunction("li@gmail.com", "123457");
 		assertTrue(isElementPresent(CT_Acc_Excersise_Day14.TEXT_COURSES));
 	}
 	
